@@ -18,7 +18,7 @@ public class JTActivityIndicator: NSObject
     private lazy var activityIndicatorView: JTActivityIndicatorView = {
         var nib = UINib(
             nibName: self.viewNibName,
-            bundle: nil
+            bundle: NSBundle(forClass: JTActivityIndicatorView.self)
         )
         var view = nib.instantiateWithOwner(
             self,
@@ -30,7 +30,6 @@ public class JTActivityIndicator: NSObject
 //=========================================================================================
 //    viewNibName is a property that contains the name of sub class from uiview of the
 //    activity indicator to be presented.
-    
    public lazy var viewNibName: String = {
         return "JTActivityIndicatorView"
     }()
