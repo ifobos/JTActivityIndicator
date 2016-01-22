@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JTActivityIndicatorView: UIView
+public class JTActivityIndicatorView: UIView
 {
     @IBOutlet weak var messageLabel: UILabel!
     

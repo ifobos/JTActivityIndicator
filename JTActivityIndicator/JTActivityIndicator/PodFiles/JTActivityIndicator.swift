@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JTActivityIndicator: NSObject
+public class JTActivityIndicator: NSObject
 {
 //MARK: - Properties
 //=========================================================================================
@@ -31,7 +31,7 @@ class JTActivityIndicator: NSObject
 //    viewNibName is a property that contains the name of sub class from uiview of the
 //    activity indicator to be presented.
     
-    lazy var viewNibName: String = {
+   public lazy var viewNibName: String = {
         return "JTActivityIndicatorView"
     }()
 
