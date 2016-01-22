@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JTActivityIndicatorView" customModule="JTActivityIndicator" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QYG-cu-BZM">
+                    <rect key="frame" x="250" y="250" width="100" height="100"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box-with-rounded-corners-and-drop-shadow.png" translatesAutoresizingMaskIntoConstraints="NO" id="lk1-93-1Tz">
+                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                        </imageView>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="MQu-Bp-Y6U">
+                            <rect key="frame" x="40" y="35" width="20" height="20"/>
+                            <color key="color" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </activityIndicatorView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1qi-Gj-9VC">
+                            <rect key="frame" x="2" y="69" width="96" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="0Up-9K-zJ8"/>
+                        <constraint firstAttribute="centerX" secondItem="MQu-Bp-Y6U" secondAttribute="centerX" id="5SA-SV-KxL"/>
+                        <constraint firstItem="lk1-93-1Tz" firstAttribute="leading" secondItem="QYG-cu-BZM" secondAttribute="leading" id="Je8-4i-78f"/>
+                        <constraint firstItem="lk1-93-1Tz" firstAttribute="top" secondItem="QYG-cu-BZM" secondAttribute="top" id="MT9-uB-NkB"/>
+                        <constraint firstAttribute="trailing" secondItem="lk1-93-1Tz" secondAttribute="trailing" id="cIj-p3-b5y"/>
+                        <constraint firstAttribute="bottom" secondItem="lk1-93-1Tz" secondAttribute="bottom" id="ckz-Pe-hrI"/>
+                        <constraint firstAttribute="bottom" secondItem="1qi-Gj-9VC" secondAttribute="bottom" constant="14" id="mrx-ZU-qyk"/>
+                        <constraint firstAttribute="trailing" secondItem="1qi-Gj-9VC" secondAttribute="trailing" constant="2" id="qAz-fX-QX5"/>
+                        <constraint firstItem="MQu-Bp-Y6U" firstAttribute="centerY" secondItem="QYG-cu-BZM" secondAttribute="centerY" constant="-5" id="uQx-NM-NHt"/>
+                        <constraint firstAttribute="width" constant="100" id="wRx-BV-aH9"/>
+                        <constraint firstItem="1qi-Gj-9VC" firstAttribute="leading" secondItem="QYG-cu-BZM" secondAttribute="leading" constant="2" id="wnh-Jh-qgW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="0.28000000000000003" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="QYG-cu-BZM" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Uma-X8-mYT"/>
+                <constraint firstItem="QYG-cu-BZM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aMS-M3-d5e"/>
+            </constraints>
+            <connections>
+                <outlet property="messageLabel" destination="1qi-Gj-9VC" id="wYh-5k-ZDc"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="box-with-rounded-corners-and-drop-shadow.png" width="301" height="256"/>
+    </resources>
+</document>
