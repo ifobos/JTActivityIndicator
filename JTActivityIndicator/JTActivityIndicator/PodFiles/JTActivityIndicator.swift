@@ -15,7 +15,7 @@ public class JTActivityIndicator: NSObject
 //    UiactivityIndicatorView is the property that contains the instance of UIView that is 
 //    presented by JTActivityIndicator, this may be an instance of the class by default
 //    JTActivityIndicatorView or may be an instance of a custom subclass of the same.
-    lazy var activityIndicatorView: JTActivityIndicatorView = {
+    private lazy var activityIndicatorView: JTActivityIndicatorView = {
         var nib = UINib(
             nibName: self.viewNibName,
             bundle: nil
@@ -38,25 +38,25 @@ public class JTActivityIndicator: NSObject
     
 //MARK: - Show functions
 
-    func show(){
+    public func show(){
         self.show(animated: true)
     }
     
-    func show(animated animated:Bool){
+    public func show(animated animated:Bool){
         self.show(
             animated    : animated,
             message     : "Loading"
         )
     }
     
-    func show(animated animated:Bool, message:String){
+    public func show(animated animated:Bool, message:String){
         self.show(
             animated    : animated,
             message     : message,
             network     : true);
     }
     
-    func show(animated animated:Bool, message:String, network: Bool){
+    public func show(animated animated:Bool, message:String, network: Bool){
         self.show(
             animated        : animated,
             message         : message,
@@ -65,7 +65,7 @@ public class JTActivityIndicator: NSObject
         )
     }
     
-    func show(animated animated:Bool, message:String, network:Bool, viewContainer:UIView){
+    public func show(animated animated:Bool, message:String, network:Bool, viewContainer:UIView){
         self.embedContentViewInContainerView(self.activityIndicatorView, container: viewContainer)
         UIApplication.sharedApplication().networkActivityIndicatorVisible = network
         self.activityIndicatorView.setMessage(message)
@@ -129,7 +129,7 @@ public class JTActivityIndicator: NSObject
     
 //MARK: - Hide functions
 
-    func hide()
+    public func hide()
     {
         UIApplication.sharedApplication().networkActivityIndicatorVisible = false
         UIView.animateWithDuration(0.35, animations: { () -> Void in

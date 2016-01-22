@@ -12,7 +12,7 @@ public class JTActivityIndicatorView: UIView
 {
     @IBOutlet weak var messageLabel: UILabel!
     
-    func setMessage(message: String)
+    public func setMessage(message: String)
     {
         self.messageLabel.text = message
     }
